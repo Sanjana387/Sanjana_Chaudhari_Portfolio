@@ -47,7 +47,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Project</a></li>
           <li><a class="nav-link scrollto " href="#work">EDUCATION</a></li>
-          <li><a class="nav-link scrollto " href="https://drive.google.com/file/d/1KIdweG8VNQ39XIV_BYHtsWRwhJCe99aG/view?usp=sharing" target="_blank">Resume</a></li>
+          <li><a class="nav-link scrollto " href="https://drive.google.com/file/d/1EMOlaK0WqZV4yYSsHyHnPGN-n-p-f4jS/view?usp=sharing" target="_blank">Resume</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -102,7 +102,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+                        <img src="me.jpg" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
@@ -648,8 +648,8 @@
                         
                         <!--4. Image Caption Generator<br><br>-->
                         <a href="https://drive.google.com/file/d/1MqKzJ5baGYf6k0D_UVW1y_dMeSXX1kld/view?usp=sharing" target="_blank"><button style="color: #06c6f7; border-color: #06c6f7;"> Offer Latter</button></a>
-                         <!--<a href="https://drive.google.com/file/d/1vncF_fn-AKNWwBM1LWP61vUxG77eeM2F/view?usp=sharing" target="_blank"><button style="color: #06c6f7; border-color: #06c6f7;">Internship Completion Letter </button></a>
-                        <a href="https://drive.google.com/file/d/1AqsMh4ShF4ZxJHqxbv5-vwrMBSOtN_6X/view?usp=sharing" target="_blank"><button style="color: #06c6f7; border-color: #06c6f7;">Letter of Recommendation</button></a>-->
+                         <a href="https://drive.google.com/file/d/1896Piy0-hYVq3sYNumm1iSBHXAUaJHQS/view?usp=sharing" target="_blank"><button style="color: #06c6f7; border-color: #06c6f7;">Internship Completion Letter </button></a>
+                        <a href="https://drive.google.com/file/d/1_ag19_qOE5PAcC0AOgzZrxYmBenhr8QL/view?usp=sharing" target="_blank"><button style="color: #06c6f7; border-color: #06c6f7;">Letter of Recommendation</button></a>
                       </span>
                     </div>
                   </div>
@@ -884,7 +884,8 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="contact.php" method="post" role="form" class="php-email-form">
+                           <form name="submit-to-google-sheets" id="contactForm" action="#" method="POST">
+                                  
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
@@ -934,7 +935,7 @@
                       <ul class="list-ico">
                         <li><span class="bi bi-geo-alt"></span> SATNA, MADHYA PRADESH 485115</li>
                         <li><span class="bi bi-phone"></span> +91 7828587706</li>
-                        <li><span class="bi bi-envelope"></span> sanjanachaudhaei7828@gmail.com</li>
+                        <li><span class="bi bi-envelope"></span> sanjanachaudhari7828@gmail.com</li>
                       </ul>
                     </div>
                     <div class="socials">
@@ -955,7 +956,18 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+  <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw4MU-7Z3gP6vkVQBJcNmML9-IYoRSYmGtrPeBfFOS9svJIIjEaa_t5BQy88ZTsA9bhAg/exec'
 
+            const form = document.forms['submit-to-google-sheets']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
   <!-- ======= Footer ======= -->
   <footer>
     <div class="container">
@@ -995,3 +1007,4 @@
 </body>
 
 </html>
+
